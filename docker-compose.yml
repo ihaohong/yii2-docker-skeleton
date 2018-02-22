@@ -25,7 +25,7 @@ services:
     image: mysql:5.7
     restart: always
     volumes:
-      - db_data:/var/lib/mysql
+      - ~/opt/data/mysql:/var/lib/mysql
     ports:
       - "3306:3306"
     environment:
@@ -35,6 +35,3 @@ services:
     image: redis
     ports:
       - "6379:6379"
-
-volumes:
-    db_data:
