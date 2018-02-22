@@ -13,3 +13,6 @@ up:
 
 down:
 	docker-compose down
+
+run-composer:
+	docker run  -v "$PWD":/opt/htdocs/yii-basic-docker -it composer /bin/bash
