@@ -1,3 +1,7 @@
+build:
+	make build-nginx
+	make build-php
+
 build-nginx:
 	docker build -t ihaohong/nginx ./docker_images/nginx
 

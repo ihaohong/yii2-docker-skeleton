@@ -19,6 +19,7 @@ services:
       - redis
     volumes:
       - ~/opt:/opt
+      - .:/opt/htdocs/yii-basic-docker
 
   mysql:
     image: mysql:5.7
