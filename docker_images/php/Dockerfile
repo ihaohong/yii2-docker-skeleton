@@ -5,7 +5,14 @@ RUN apt-get update && apt-get install -y \
         libmcrypt-dev \
         libpng-dev \
         libmemcached-dev \
-    && docker-php-ext-install -j$(nproc) iconv mcrypt pdo_mysql \
+        libjpeg62-turbo-dev \
+        libmcrypt-dev \
+        libpng12-dev \
+        libmysqlclient-dev \
+        libicu-dev \
+        libpq-dev \
+        curl \
+    && docker-php-ext-install -j$(nproc) iconv mcrypt pdo_mysql mbstring pdo_pgsql \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install -j$(nproc) gd \
     && curl -L -o /tmp/memcached.tar.gz "https://github.com/php-memcached-dev/php-memcached/archive/php7.tar.gz" \
