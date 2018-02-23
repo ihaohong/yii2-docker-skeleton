@@ -17,9 +17,15 @@ services:
     depends_on:
       - mysql
       - redis
+      - memcache
     volumes:
       - ~/opt:/opt
       - .:/opt/htdocs/yii2-docker-skeleton
+
+  memcache:
+    image: yii-docker-skeleton/memcache
+    ports:
+      - "11211:11211"
 
   mysql:
     image: yii-docker-skeleton/mysql

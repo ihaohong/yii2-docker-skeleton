@@ -1,8 +1,12 @@
 build:
+	make build-memcache
 	make build-redis
 	make build-mysql
 	make build-nginx
 	make build-php
+
+build-memcache:
+	docker build -t yii-docker-skeleton/memcache ./docker_images/memcache
 
 build-redis:
 	docker build -t yii-docker-skeleton/redis ./docker_images/redis
