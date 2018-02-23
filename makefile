@@ -14,5 +14,5 @@ up:
 down:
 	docker-compose down
 
-run-composer:
+in-composer:
 	docker run --rm  -v "$PWD":/opt/htdocs/yii-basic-docker -it composer /bin/bash
