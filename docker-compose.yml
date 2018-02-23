@@ -22,7 +22,7 @@ services:
       - .:/opt/htdocs/yii2-docker-skeleton
 
   mysql:
-    image: mysql:5.7
+    image: yii-docker-skeleton/mysql
     restart: always
     volumes:
       - ~/opt/data/mysql:/var/lib/mysql
@@ -32,6 +32,6 @@ services:
       MYSQL_ROOT_PASSWORD: 123456
 
   redis:
-    image: redis
+    image: yii-docker-skeleton/redis
     ports:
       - "6379:6379"

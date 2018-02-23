@@ -1,6 +1,14 @@
 build:
+	make build-redis
+	make build-mysql
 	make build-nginx
 	make build-php
+
+build-redis:
+	docker build -t yii-docker-skeleton/redis ./docker_images/redis
+
+build-mysql:
+	docker build -t yii-docker-skeleton/mysql ./docker_images/mysql
 
 build-nginx:
 	docker build -t yii-docker-skeleton/nginx ./docker_images/nginx
