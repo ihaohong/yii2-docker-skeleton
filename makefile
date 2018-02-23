@@ -3,10 +3,10 @@ build:
 	make build-php
 
 build-nginx:
-	docker build -t ihaohong/nginx ./docker_images/nginx
+	docker build -t yii-docker-skeleton/nginx ./docker_images/nginx
 
 build-php:
-	docker build -t ihaohong/php ./docker_images/php
+	docker build -t yii-docker-skeleton/php ./docker_images/php
 
 up:
 	docker-compose up -d

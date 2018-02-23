@@ -1,17 +1,17 @@
 version: '2'
 services:
   nginx:
-    image: ihaohong/nginx
+    image: yii-docker-skeleton/nginx
     ports:
       - "80:80"
     depends_on:
       - php
     volumes:
       - ~/opt:/opt
-      - .:/opt/htdocs/yii-basic-docker
+      - .:/opt/htdocs/yii2-docker-skeleton
 
   php:
-    image: ihaohong/php
+    image: yii-docker-skeleton/php
     ports:
       - "9000:9000"
     depends_on:
@@ -19,7 +19,7 @@ services:
       - redis
     volumes:
       - ~/opt:/opt
-      - .:/opt/htdocs/yii-basic-docker
+      - .:/opt/htdocs/yii2-docker-skeleton
 
   mysql:
     image: mysql:5.7
