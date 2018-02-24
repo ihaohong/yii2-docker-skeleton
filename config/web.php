@@ -49,6 +49,17 @@ $config = [
             'port' => 6379,
             'database' => 0,
         ],
+        'memcache' => [
+            'class' => 'yii\caching\Memcache',
+            'useMemcached' => true,
+            'servers' => [
+                [
+                    'host' => 'memcache',
+                    'port' => '11211',
+                    'weight' => 100
+                ]
+            ]
+        ]
         /*
         'urlManager' => [
             'enablePrettyUrl' => true,
