@@ -28,6 +28,3 @@ down:
 
 in-php:
 	docker exec -it yii2dockerskeleton_php_1 /bin/bash
-
-in-composer:
-	@docker run --rm  -v ${PWD}:/opt/htdocs/yii2-docker-skeleton -it composer /bin/bash

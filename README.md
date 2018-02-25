@@ -1,4 +1,4 @@
-Yii2 Docker Skeleton
+# Yii2 Docker Skeleton
 
 ---
 
@@ -10,8 +10,8 @@ Yii2 Docker Skeleton
 - Redis
 - MemCache
 
-# 安装
-## 安装Docker
+## 安装
+### 安装Docker
 [Ubuntu](https://github.com/yeasy/docker_practice/blob/master/install/ubuntu.md)
 [CentOS](https://github.com/yeasy/docker_practice/blob/master/install/centos.md)
 [MacOS](https://github.com/yeasy/docker_practice/blob/master/install/mac.md)
@@ -19,9 +19,11 @@ Yii2 Docker Skeleton
 
 最后记得使用镜像加速，参考[这里](https://github.com/yeasy/docker_practice/blob/master/install/mirror.md)
 
-## 安装项目
+Linux用户需要单独安装docker-compose，参考[这里](https://github.com/yeasy/docker_practice/blob/master/compose/install.md)
 
-### 下载代码
+### 创建项目
+
+下载代码
 ```shell
 git clone git@github.com:ihaohong/yii2-docker-skeleton.git
 ```
@@ -31,10 +33,10 @@ git clone git@github.com:ihaohong/yii2-docker-skeleton.git
 mkdir ~/opt ~/opt/data ~/opt/data/mysql ~/opt/data/elasticsearch ~/opt/log ~/opt/log/nginx ~/opt/log/php ~/opt/htdocs
 ```
 
-### 安装composer依赖
+### 使用composer安装项目依赖
 进入composer容器
 ```shell
-make in-composer
+docker run --rm  -v ${PWD}:/opt/htdocs/yii2-docker-skeleton -it composer /bin/bash
 ```
 
 容器里执行以下命令，安装依赖
@@ -47,11 +49,18 @@ composer依赖安装完后，退出容器
 exit
 ```
 
-# 宿主机运行项目
+### 宿主机运行项目
 ```shell
 make build # 编译镜像
 make up # 启动应用
 ```
 
-### 测试
-### 脚本
+## 测试
+
+浏览器中打开
+http://127.0.0.1/
+就能看到Yii2框架的欢迎页了。
+
+打开 http://127.0.0.1/?r=test/index
+可以看到MySQL,Redis,MemCache这三个组件的连通状态。
+
