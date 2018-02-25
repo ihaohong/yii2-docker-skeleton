@@ -31,7 +31,7 @@ cd yii2-docker-skeleton
 
 创建目录
 ```shell
-mkdir ~/opt ~/opt/data ~/opt/data/mysql ~/opt/data/elasticsearch ~/opt/log ~/opt/log/nginx ~/opt/log/php ~/opt/htdocs
+mkdir ~/opt ~/opt/data ~/opt/data/mysql ~/opt/log ~/opt/log/nginx ~/opt/log/php ~/opt/htdocs
 ```
 
 ### 使用composer安装项目依赖
