@@ -26,6 +26,7 @@ Linux用户需要单独安装docker-compose，参考[这里](https://github.com/
 下载代码
 ```shell
 git clone git@github.com:ihaohong/yii2-docker-skeleton.git
+cd yii2-docker-skeleton
 ```
 
 创建目录
