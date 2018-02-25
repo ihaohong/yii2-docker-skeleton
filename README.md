@@ -12,10 +12,10 @@
 
 ## 安装
 ### 安装Docker
-[Ubuntu](https://github.com/yeasy/docker_practice/blob/master/install/ubuntu.md)
-[CentOS](https://github.com/yeasy/docker_practice/blob/master/install/centos.md)
-[MacOS](https://github.com/yeasy/docker_practice/blob/master/install/mac.md)
-[Windows](https://github.com/yeasy/docker_practice/blob/master/install/windows.md)
+- [Ubuntu](https://github.com/yeasy/docker_practice/blob/master/install/ubuntu.md)
+- [CentOS](https://github.com/yeasy/docker_practice/blob/master/install/centos.md)
+- [MacOS](https://github.com/yeasy/docker_practice/blob/master/install/mac.md)
+- [Windows](https://github.com/yeasy/docker_practice/blob/master/install/windows.md)
 
 最后记得使用镜像加速，参考[这里](https://github.com/yeasy/docker_practice/blob/master/install/mirror.md)
 
