@@ -3,7 +3,7 @@
 ---
 
 使用Doker多容器搭建Yii2本地应用。
-使用容器
+用到的容器
 - Nginx
 - PHP
 - MySQL
