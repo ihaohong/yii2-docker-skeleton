@@ -2,7 +2,7 @@
 
 ---
 
-使用Doker多容器搭建Yii2本地应用。
+使用Docker多容器搭建Yii2本地应用。
 使用到的容器:
 - Nginx
 - PHP
