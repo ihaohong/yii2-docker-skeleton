@@ -50,7 +50,7 @@ $config = [
             'database' => 0,
         ],
         'memcache' => [
-            'class' => 'yii\caching\Memcache',
+            'class' => 'yii\caching\MemCache',
             'useMemcached' => true,
             'servers' => [
                 [
